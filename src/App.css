@@ -2,23 +2,31 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  min-height: 100%;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: #f8fafc;
 }
 
 .container {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .card {
   width: 500px;
-  max-width: 90%;
-  background: white;
+  max-width: 100%;
+  background: #ffffff;
   padding: 40px;
   border-radius: 15px;
   text-align: center;
@@ -26,8 +34,9 @@ body {
 }
 
 .card h1 {
+  margin: 0 0 25px;
   color: #1e293b;
-  margin-bottom: 25px;
+  font-size: 32px;
 }
 
 button {
@@ -35,9 +44,10 @@ button {
   padding: 12px 25px;
   border-radius: 8px;
   background: #7c3aed;
-  color: white;
+  color: #ffffff;
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 button:hover {
@@ -52,6 +62,7 @@ button:hover {
 }
 
 .content h2 {
+  margin-top: 0;
   color: #6d28d9;
 }
 
@@ -61,6 +72,16 @@ button:hover {
 }
 
 .hidden-message {
-  margin-top: 25px;
+  margin: 25px 0 0;
   color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 25px;
+  }
+
+  .card h1 {
+    font-size: 26px;
+  }
 }
