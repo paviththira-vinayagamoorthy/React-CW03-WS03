@@ -12,11 +12,9 @@ function App() {
     <div className="container">
       <div className="card">
         <h1>Conditional Rendering</h1>
-
-        <button onClick={toggleContent}>
-          Toggle Content
-        </button>
-
+<button onClick={toggleContent}>
+  {showContent ? "Hide Content" : "Show Content"}
+</button>
         {showContent ? (
           <div className="content">
             <h2> Welcome!</h2>
